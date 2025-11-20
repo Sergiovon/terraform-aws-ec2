@@ -13,8 +13,3 @@ variable "instance_name" {
   description = "EC2 instance name"
 }
 
-output "web_server_count" {
-  description = "Number of web servers provisioned"
-  value       = length(module.ec2_instances.instance_ids)
-}
-
