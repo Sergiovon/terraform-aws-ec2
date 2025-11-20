@@ -13,7 +13,7 @@ output "private_ip" {
   description = "Virtual Machine Private IP address"
 }
 
-output "web_server_count" {
-  description = "Number of web servers provisioned"
-  value       = length(module.ec2_instances.instance_ids)
+output "instance_id" {
+  description = "ID of the EC2 instance"
+  value       = aws_instance.web.id
 }
