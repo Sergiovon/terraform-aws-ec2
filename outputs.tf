@@ -12,3 +12,8 @@ output "private_ip" {
   value = aws_instance.vm.private_ip
   description = "Virtual Machine Private IP address"
 }
+
+output "web_server_count" {
+  description = "Number of web servers provisioned"
+  value       = length(module.ec2_instances.instance_ids)
+}
