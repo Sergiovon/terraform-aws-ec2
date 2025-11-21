@@ -12,3 +12,8 @@ output "private_ip" {
   value = aws_instance.vm.private_ip
   description = "Virtual Machine Private IP address"
 }
+
+output "instance_id" {
+  description = "ID of the EC2 instance"
+  value       = aws_instance.vm.id
+}
